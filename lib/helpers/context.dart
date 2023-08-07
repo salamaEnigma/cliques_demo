@@ -33,3 +33,10 @@ extension DeviceSizeExtension on BuildContext {
       (size.width > 768 && size.width <= 1080) ||
       (size.height > 1024 && size.height <= 1920);
 }
+
+extension ThemeExtension on BuildContext {
+  // Theme Extensions
+  ThemeData get theme => Theme.of(this);
+  TextTheme get textTheme => theme.textTheme;
+  ColorScheme get colorScheme => theme.colorScheme;
+}
